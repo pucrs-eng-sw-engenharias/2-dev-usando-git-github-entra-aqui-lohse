@@ -4,32 +4,8 @@
 
 int main()
 {
-<<<<<<< HEAD
-    printf("Mars Rover!\n");
-    int tamanho_matriz[2] = {0 0};
-    
-    printf("Defina qual o tamanho da Matriz"):
-    scanf("%i %i", &tamanho_matriz[1], &tamanho_matriz[2]);
-    int matiz[tamanho_matriz(1) tamanho_matriz(2)] = 0;
-    
-    int x, y;
-    char heading,posicao[5] = {1,'',2,'',' N'};
-    x = posicao(1);
-    y = posicao(3);
-    heading = posicao(5);
-    
-    char comando[20] = {'M,'L','M','R'};
-        for(int i=0; i<sizeof(comando); i++){
-            if(heading == 'N'){
-                
-            }
-            if(heading == 'W'){
-                
-            }
-        }
-=======
     FILE *arquivo_txt;
-    char *resultado, texto_da_linha[50], comando[20], heading;
+    char *resultado, texto_da_linha[50], comando, heading;
     int linha, m=0, n=0, x=0, y=0;
 
 
@@ -50,9 +26,6 @@ int main()
         }
     }
 
-<<<<<<< Updated upstream
->>>>>>> master
-=======
     //return 0;
 
     /*
@@ -75,16 +48,15 @@ int main()
     comando = "MLMR";
         for(int i=0; i<sizeof(comando); i++){
             if(heading == 'N'){
-
+                if(comando*(i))
             }
             if(heading == 'W'){
 
             }
         }
 
-    }
 
->>>>>>> Stashed changes
+
     return 0;
 
 }
