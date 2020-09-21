@@ -50,6 +50,41 @@ int main()
         }
     }
 
+<<<<<<< Updated upstream
 >>>>>>> master
+=======
+    //return 0;
+
+    /*
+
+    printf("Mars Rover!\n");
+    int tamanho_matriz[2] = {0,0};
+
+    printf("Defina qual o tamanho da Matriz");
+    scanf("%i %i", &tamanho_matriz[1], &tamanho_matriz[2]);
+    int matiz[tamanho_matriz(1),tamanho_matriz(2)] = 0;
+    */
+    printf("\nMars Rover!\n");
+    char posicao[] = "1 2 N";
+    printf("\n%c", *posicao);
+    printf("\n%c", *(posicao + 2));
+    x = *posicao;
+    y = *(posicao + 2);
+    heading = *(posicao + 4);
+
+    comando = "MLMR";
+        for(int i=0; i<sizeof(comando); i++){
+            if(heading == 'N'){
+
+            }
+            if(heading == 'W'){
+
+            }
+        }
+
+    }
+
+>>>>>>> Stashed changes
     return 0;
+
 }
