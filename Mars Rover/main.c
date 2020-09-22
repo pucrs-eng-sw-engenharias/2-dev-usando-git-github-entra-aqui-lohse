@@ -1,11 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include<string.h>
 #include <conio.h>
 
 int main()
 {
     FILE *arquivo_txt;
-    char *resultado, texto_da_linha[50], comando, heading;
+    char *resultado, texto_da_linha[50], heading;
+    char comando[20];
     int linha, m=0, n=0, x=0, y=0;
 
 
@@ -26,17 +28,6 @@ int main()
         }
     }
 
-    //return 0;
-
-    /*
-
-    printf("Mars Rover!\n");
-    int tamanho_matriz[2] = {0,0};
-
-    printf("Defina qual o tamanho da Matriz");
-    scanf("%i %i", &tamanho_matriz[1], &tamanho_matriz[2]);
-    int matiz[tamanho_matriz(1),tamanho_matriz(2)] = 0;
-    */
     printf("\nMars Rover!\n");
     char posicao[] = "1 2 N";
     printf("\n%c", *posicao);
@@ -45,18 +36,38 @@ int main()
     y = *(posicao + 2);
     heading = *(posicao + 4);
 
-    comando = "MLMR";
+    char  sera, temp[20] = "MLMR";
+    strcpy(comando, temp);
+    printf("\n%c", *(comando + 0));
+
+    int ret;
+    strcpy(sera, *(comando + 0));
+    ret = strcmp(sera, "M");
+    printf("%i",&ret);
+
         for(int i=0; i<sizeof(comando); i++){
             if(heading == 'N'){
-                if(comando*(i))
+                if(*(comando + i) == 'M') y++;
+                if(*(comando + i) == 'L') heading = "W";
+                if(*(comando + i) == 'R') heading = "E";
             }
             if(heading == 'W'){
-
+                if(*(comando + i) == 'M') x--;
+                if(*(comando + i) == 'L') heading = "S";
+                if(*(comando + i) == 'R') heading = "N";
             }
+            if(heading == 'S'){
+                if(*(comando + i) == "M") y--;
+                if(*(comando + i) == "L") heading = "E";
+                if(*(comando + i) == "R") heading = "W";
+            }
+            if(heading == 'E'){
+                if(*(comando + i) == "M") x++;
+                if(*(comando + i) == "L") heading = "N";
+                if(*(comando + i) == "R") heading = "S";
+            }
+            printf("\nA contagem esta em %i e o robo esta virado para ",&i);
+            puts(heading);
         }
-
-
-
     return 0;
-
 }
