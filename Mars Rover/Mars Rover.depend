@@ -1,7 +1,9 @@
 # depslib dependency file v1.0
-1584205420 source:c:\users\felip\desktop\felipe\pucrs\engenharia de software\2-dev-usando-git-github-entra-aqui-lohse\mars rover\main.c
+1601238596 source:c:\users\felip\desktop\felipe\pucrs\engenharia de software\2-dev-usando-git-github-entra-aqui-lohse\mars rover\main.c
 	<stdio.h>
 	<stdlib.h>
+	<string.h>
+	<conio.h>
 
 1600644771 source:e:\googledrive\pucrs\engenharia de controle e automação\10 semestre\engenharia de software\engenharia_de_software\2-dev-usando-git-github-entra-aqui-lohse\mars rover\main.c
 	<stdio.h>

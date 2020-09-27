@@ -9,7 +9,7 @@ int main()
     char *resultado, texto_da_linha[50], heading;
     char comando[20];
     int linha, m=0, n=0, x=0, y=0;
-    int tamanho_do_tabuleiro = 0;
+    int tamanho_do_tabuleiro_x = 0, tamanho_do_tabuleiro_y = 0, area = 0;
 
 
     arquivo_txt = fopen("rover.txt","rt");
@@ -26,10 +26,24 @@ int main()
         {
             printf("linha %d: %s",linha,texto_da_linha);
             if(linha == 1){
-                tamanho_do_tabuleiro = atoi(texto_da_linha);
-                printf("\n----%d----\n",tamanho_do_tabuleiro);
+                tamanho_do_tabuleiro_x = (int)*texto_da_linha - 48;
+                tamanho_do_tabuleiro_y = (int)*(texto_da_linha+2) - 48;
+                area = tamanho_do_tabuleiro_x*tamanho_do_tabuleiro_y;
+                printf("\n----%d m^2----\n\n",area);
             }
             linha++;
+             if(linha == 4){
+                x = (int)*texto_da_linha - 48;
+                y = (int)*(texto_da_linha+2) - 48;
+                heading = (texto_da_linha+4);
+            }
+              if(linha == 6){
+
+
+                printf("\n\n********%s*********\n\n",&texto_da_linha[2]);
+
+
+            }
         }
     }
 
