@@ -113,8 +113,8 @@ int main()
     }
     printf("\n\nProcesso Finalizado!\nQuantidade total de robos: %i\nx   y   h",robo);
     heading_robo[robo+1] = '\0';
-    //for(int i = 0; i<tamanho_comando; i++){
-    for(int j = 0; j<=robo; j++){
+
+    for(int j = 1; j<=robo; j++){
 
         printf("\n%i   %i   %s",x_robo[j],y_robo[j],heading_robo[j]);
 
